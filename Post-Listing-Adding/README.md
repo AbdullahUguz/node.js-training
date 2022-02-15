@@ -1,6 +1,6 @@
 # Post Listing and Adding
 
-Primise ve asenkron yapısını kullanarak postları listeme ve ekleme işlemi yapıldı.
+Promise ve asenkron yapısını kullanarak postları listeme ve ekleme işlemi yapıldı.
 
 ## Proje Görseli
 
