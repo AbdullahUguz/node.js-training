@@ -4,7 +4,7 @@ Modül yapısı kullanılarak dairenin alanını ve çevresini hesapladım.
 
 ## Proje Görseli
 
-![ss1](https://user-images.githubusercontent.com/73312086/154252213-ae15488d-1650-4a21-90a8-828f2f1fce7a.JPG)
+![sasa](https://user-images.githubusercontent.com/73312086/154252706-abf5c89f-3056-4459-b652-23d17cf437c2.JPG)
 
 
 
