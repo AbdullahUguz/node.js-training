@@ -1,28 +1,37 @@
 const express = require('express');
 
+const mongoose = require('mongoose');
+
+const pageRoute = require('./routes/pageRoute');
+
+const courseRoute = require('./routes/courseRoute');
+
 const app = express();
 
+// Connect Db
+mongoose
+  .connect('mongodb://localhost/smartedu-db')
+  .then(() => {
+    console.log('Db Connected');
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
-// Template 
-app.set("view engine","ejs");
+// Template
+app.set('view engine', 'ejs');
 
 //Middlewears
-app.use(express.static("public"));
+app.use(express.static('public'));
+app.use(express.json());
+app.use(express.urlencoded({ extended:true }));
 
-//Routes
+// Routes
+app.use('/', pageRoute);
 
-app.get('/', (req, res) => {
-  res.status(200).render('index',{
-    page_name:"index"
-  });
-});
+app.use('/about', pageRoute);
 
-app.get('/about', (req, res) => {
-  res.status(200).render('about',{
-    page_name:"about"
-  });
-});
-
+app.use('/courses', courseRoute);
 
 const port = 3000;
 
