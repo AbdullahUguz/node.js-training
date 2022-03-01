@@ -8,4 +8,6 @@ router.route('/').post(courseController.createCourse); // bunu ifade eder  http:
 
 router.route('/').get(courseController.getAllCourses);
 
+router.route('/:slug').get(courseController.getCourse);
+
 module.exports = router;

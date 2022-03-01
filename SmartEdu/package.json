@@ -16,7 +16,8 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.3",
-    "mongoose": "^6.2.4"
+    "mongoose": "^6.2.4",
+    "slugify": "^1.6.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
