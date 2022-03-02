@@ -8,6 +8,8 @@ const courseRoute = require('./routes/courseRoute');
 
 const categoryRoute = require('./routes/categoryRoute');
 
+const userRoute = require('./routes/userRoute');
+
 const app = express();
 
 // Connect Db
@@ -31,7 +33,13 @@ app.use(express.urlencoded({ extended:true }));
 // Routes
 app.use('/', pageRoute);
 
+/*
 app.use('/about', pageRoute);
+
+app.use('/register', pageRoute);
+*/
+
+app.use('/users', userRoute);
 
 app.use('/courses', courseRoute);
 
