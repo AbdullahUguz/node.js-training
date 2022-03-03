@@ -3,13 +3,28 @@
 <body class="host_version"> 
 
 	<%- include('partials/_navigation') -%>
+
+	<% if(user)  {%>
+
+		<% if(user.role === 'Student')  { %>
 	
-	<div class="all-title-box">
-		<div class="container text-center">
-			<h1><%= user.name %><span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
-		</div>
-	</div>
+			<div class="all-title-box">
+				<div class="container text-center">
+					<h1><%= user.name %><span class="m_1">Student</span></h1>
+				</div>
+			</div>
+
+		<% }%>
+		<%if(user.role === 'Teacher')  { %>
 	
+			<div class="all-title-box">
+				<div class="container text-center">
+					<h1><%= user.name %><span class="m_1">Teacher</span></h1>
+				</div>
+			</div>
+
+		<% }%>
+
     <div id="overviews" class="section wb">
         <div class="container">
             <div class="row"> 
@@ -94,6 +109,7 @@
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end section -->
+	<% }%>
 
 	<%- include('partials/_footer') -%>
 
