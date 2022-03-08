@@ -21,7 +21,7 @@
 						</div>
 						<div class="post-content">
 
-							<% if (user && !(user.courses.includes(course._id))) {  %>
+							<% if (user =='Student' && !(user.courses.includes(course._id))) {  %>
 							<div class="post-date">
 								<form method="post" action="/courses/enroll">
 									<input type="hidden" name="course_id" value="<%= course._id %>">
